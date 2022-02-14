@@ -1,9 +1,9 @@
 #news-container{
-width: 80vw;
+width: 85vw;
 height: 100vh;
 margin: auto;
 display:grid;
-background-color: rgb(194, 187, 187);
+
 
 grid-template-columns: repeat(3,1fr);
 grid-gap:10px;
@@ -20,4 +20,7 @@ grid-gap:10px;
       grid-template-columns: repeat(1,1fr);
     }
   }
-  
+  .infinite-scroll-component {
+    overflow: hidden !important;
+   
+  }

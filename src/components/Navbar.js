@@ -1,8 +1,18 @@
-import React from 'react';
+import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
 
 export const Navbar = (props) => {
+    const [searchText, setsearchText] = useState('');
+    const inputHandler = (e) => {
+        setsearchText(e.target.value);
+    }
+
+    const searchIt = () => {
+        props.searchT(searchText);
+        setsearchText('');
+    }
+
     return (
         <nav className={`navbar navbar-expand-lg  ${props.dark === true ? "bg-dark navbar-dark" : "bg-light navbar-light"}`}>
             <div className="container-fluid">
@@ -26,10 +36,10 @@ export const Navbar = (props) => {
                         </li>
                     </ul>
                     {
-                        props.search === true && <form className="d-flex">
-                            <input className="form-control me-2" type="search" placeholder="Search" aria-label="Search" />
-                            <button className="btn btn-outline-success" type="submit">Search</button>
-                        </form>
+                        props.search === true && <div className="d-flex">
+                            <input className="form-control me-2" type="search" value={searchText} onChange={inputHandler} placeholder="Search" aria-label="Search" />
+                            <Link className="btn btn-outline-success" to='/Search' type="submit" onClick={searchIt} >Search</Link>
+                        </div>
                     }
                 </div>
             </div>
