@@ -62,7 +62,7 @@ const Sports = () => {
                                         <div className="card-body"  >
                                             <h5 className="card-title">{NewsEl.title.substr(0, 65)}</h5>
                                             <p>Source-<a href={`https://www.${NewsEl.rights}`} target='_blank'>{NewsEl.rights}</a></p>
-                                            <p className="card-text">{NewsEl.excerpt.substr(0, 100)}....</p>
+                                            <p className="card-text">{NewsEl.excerpt}....</p>
                                             <div className="d-flex justify-content-center"> <a href={NewsEl.link} target='_blank' rel="noreferrer" className="btn btn-primary">Visit News</a></div>
                                         </div>
                                         <div className="card-footer d-flex justify-content-between" style={{ height: '2rem' }} >
