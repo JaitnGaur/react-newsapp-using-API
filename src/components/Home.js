@@ -13,7 +13,7 @@ const Home = () => {
             let response = await fetch(`https://api.newscatcherapi.com/v2/latest_headlines?countries=IN&page_size=18&lang=en&when=24h&page=${pageNo}`,
                 Headers = {
                     method: 'GET',
-                    headers: { 'x-api-key': 'U6b--4-R9JOqP_ZToWRYHFYnxdu9CR8eiiI_9qERa8Q' }
+                    headers: { 'x-api-key': 'VgrTESnMYGT7P6LqJQoLuxUMrIfG10rfLPZDDC5A0gA' }
                 });
 
 
