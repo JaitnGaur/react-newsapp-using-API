@@ -11,7 +11,7 @@ const Search = (props) => {
             let response = await fetch(`https://api.newscatcherapi.com/v2/search?q=${props.searchText}&page_size=18&page=${pageNo}`,
                 Headers = {
                     method: 'GET',
-                    headers: { 'x-api-key': 'U6b--4-R9JOqP_ZToWRYHFYnxdu9CR8eiiI_9qERa8Q' }
+                    headers: { 'x-api-key': 'VgrTESnMYGT7P6LqJQoLuxUMrIfG10rfLPZDDC5A0gA' }
                 });
 
 
